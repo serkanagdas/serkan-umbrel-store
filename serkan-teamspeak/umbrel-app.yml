@@ -33,7 +33,7 @@ support: https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issu
 gallery:
   - https://raw.githubusercontent.com/serkanagdas/nodecast-umbrel-store/main/serkan-teamspeak/icon.svg
 releaseNotes: >-
-  Initial release — TeamSpeak 3 server 3.13.8.
+  Upstream image release 3.13.8.
 dependencies: []
 path: ""
 defaultUsername: ""
