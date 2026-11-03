@@ -8,7 +8,7 @@ services:
       APP_PORT: 3000
 
   server:
-    image: ghcr.io/technomancer702/nodecast-tv:2.2.1
+    image: ghcr.io/technomancer702/nodecast-tv:2.2.8
     restart: on-failure
     init: true
     environment:
