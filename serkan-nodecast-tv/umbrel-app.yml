@@ -4,7 +4,7 @@ name: NodeCast TV
 tagline: Self-hosted IPTV player for Xtream Codes and M3U providers
 icon: https://raw.githubusercontent.com/serkanagdas/serkan-umbrel-store/main/serkan-nodecast-tv/icon.svg
 category: Media
-version: "2.2.1-r5"
+version: "2.2.8"
 port: 3000
 description: >-
   Modern web-based IPTV player featuring Live TV, EPG, Movies (VOD) and
@@ -23,7 +23,7 @@ support: https://github.com/technomancer702/nodecast-tv/issues
 gallery:
   - https://raw.githubusercontent.com/serkanagdas/serkan-umbrel-store/main/serkan-nodecast-tv/icon.svg
 releaseNotes: >-
-  Use new indigo vector icon and enable Intel VAAPI (/dev/dri) hardware acceleration.
+  Upstream image release 2.2.8.
 dependencies: []
 path: ""
 defaultUsername: ""
