@@ -4,7 +4,7 @@ name: OpenBot Server
 tagline: Local-first multi-agent server for Codex, Claude and Grok
 icon: https://raw.githubusercontent.com/serkanagdas/nodecast-umbrel-store/main/serkan-openbot/icon.svg
 category: AI
-version: "0.56.0"
+version: "0.63.0"
 port: 3010
 description: >-
   OpenBot is a local-first multi-agent workspace that runs persistent
@@ -27,7 +27,7 @@ support: https://github.com/nightly-labs/openbot/issues
 gallery:
   - https://raw.githubusercontent.com/serkanagdas/nodecast-umbrel-store/main/serkan-openbot/icon.svg
 releaseNotes: >-
-  Upstream image release v0.56.0.
+  Upstream image release v0.63.0.
 dependencies: []
 path: ""
 defaultUsername: ""
