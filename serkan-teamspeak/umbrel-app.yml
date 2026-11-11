@@ -4,7 +4,7 @@ name: TeamSpeak 3 Server
 tagline: Voice communication server for gaming and teams
 icon: https://raw.githubusercontent.com/serkanagdas/nodecast-umbrel-store/main/serkan-teamspeak/icon.svg
 category: Social
-version: "3.13.8"
+version: "3.13.9"
 port: 9987
 description: >-
   TeamSpeak 3 — the classic voice server for gaming, education and
@@ -33,7 +33,7 @@ support: https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issu
 gallery:
   - https://raw.githubusercontent.com/serkanagdas/nodecast-umbrel-store/main/serkan-teamspeak/icon.svg
 releaseNotes: >-
-  Upstream image release 3.13.8.
+  Upstream image release 3.13.9.
 dependencies: []
 path: ""
 defaultUsername: ""

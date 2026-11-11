@@ -11,7 +11,7 @@ services:
       APP_PORT: 9987
 
   server:
-    image: teamspeak:3.13.8
+    image: teamspeak:3.13.9
     restart: on-failure
     init: true
     environment:
