@@ -78,7 +78,7 @@ jobs:
       - name: Compare with packaged version
         id: cmp
         run: |
-          CURRENT="$(grep -m1 '^version:' ${{ matrix.dir }}/umbrel-app.yml | sed 's/version: *"\?//;s/"\?//')"
+          CURRENT="$(grep -m1 '^version:' ${{ matrix.dir }}/umbrel-app.yml | sed -E 's/^version:[[:space:]]*["'\'']?//;s/["'\''[:space:]]*$//')"
           echo "Packaged: $CURRENT / Newest image tag: ${{ steps.upstream.outputs.version }}"
           if [ "$CURRENT" = "${{ steps.upstream.outputs.version }}" ]; then
             echo "update=false" >> "$GITHUB_OUTPUT"
@@ -120,12 +120,13 @@ jobs:
             Auto-merged by the update workflow.
           commit-message: "chore(${{ matrix.dir }}): bump to ${{ steps.upstream.outputs.version }}"
 
-      - name: Enable auto-merge on the PR
-        # Safety valve: auto-merge honours branch protection. If a required
-        # review is configured, the PR waits for a human instead of merging.
+      - name: Merge or enable auto-merge on the PR
+        # Merges directly when no branch protection blocks it; falls back to
+        # auto-merge when required checks/reviews are configured.
         if: steps.cmp.outputs.update == 'true' && steps.pr.outputs.pull-request-number != ''
         run: |
-          gh pr merge "${{ steps.pr.outputs.pull-request-number }}" \
-            --squash --auto --delete-branch
+          PR="${{ steps.pr.outputs.pull-request-number }}"
+          gh pr merge "$PR" --squash --delete-branch || \
+            gh pr merge "$PR" --squash --auto --delete-branch
         env:
           GH_TOKEN: ${{ github.token }}
